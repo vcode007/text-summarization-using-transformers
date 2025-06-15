@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload or Enter Text</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Upload a Text File or Enter Text</h1>
+        <form action="/summarize" method="post" enctype="multipart/form-data">
+            <textarea name="text" rows="10" cols="50" placeholder="Enter text here..."></textarea><br><br>
+            <label for="file">Or upload a text file:</label>
+            <input type="file" name="file" id="file"><br><br>
+            <button type="submit">Summarize</button>
+        </form>
+    </div>
+</body>
+</html>
